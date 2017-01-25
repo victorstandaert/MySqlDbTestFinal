@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.victor.mysqldbtest.Register"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/regiser_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04">
+
+                <EditText
+                    android:layout_width="166dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/new_first_name"
+                    android:hint="Voornaam"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Famillienaam"
+                    android:maxLines="1"
+                    android:ems="10"
+                    android:id="@+id/new_last_name"
+                    android:singleLine="true"  />
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Gebruikersnaam"
+                android:maxLines="1"
+                android:ems="10"
+                android:id="@+id/new_user_name"
+                android:layout_weight="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Voer een e-mailadres in"
+                android:maxLines="1"
+                android:ems="10"
+                android:id="@+id/new_user_email"
+                android:layout_weight="1"
+                android:singleLine="true"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Voer het e-mailadres nog een in"
+                android:maxLines="1"
+                android:ems="10"
+                android:id="@+id/new_user_email_check"
+                android:layout_weight="1"
+                android:singleLine="true"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04">
+
+            <EditText
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/new_user_pass"
+                android:hint="Paswoord"
+                android:fontFamily="Arial"
+                android:singleLine="true"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Herhaal paswoord"
+                android:maxLines="1"
+                android:ems="10"
+                android:id="@+id/new_user_pass_check"
+                android:fontFamily="Arial"
+                android:layout_weight="0.5"
+                android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.04">
+
+                <TextView
+                    android:text="Geboortedatum:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/new_user_birth"
+                    android:textSize="8pt"
+                    android:textColor="@color/zwart"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="1pt"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.04">
+
+                <NumberPicker
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/numberPicker1"
+                    android:layout_weight="1"
+                    />
+
+                <NumberPicker
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/numberPicker2"
+                    android:layout_weight="1" />
+
+                <NumberPicker
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/numberPicker3"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <Button
+                android:text="Registreren"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button3"
+                android:onClick="userReg"
+                android:layout_margin="10dp"
+
+                />
+
+            <TextView
+                android:text="Al een account? Klik hier."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/link_Login"
+                android:onClick="userLog" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
