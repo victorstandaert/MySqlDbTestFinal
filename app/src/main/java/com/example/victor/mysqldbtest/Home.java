@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import layout.BlankFragment;
+
 @RequiresApi(api = Build.VERSION_CODES.N)
 public class Home extends AppCompatActivity {
 
@@ -31,7 +33,6 @@ public class Home extends AppCompatActivity {
 
     public void NewActivity(View view)
     {
-        startActivity(new Intent(this,AddActivity.class));
+        startActivity(new Intent(this, AddActivity.class));
     }
-
 }

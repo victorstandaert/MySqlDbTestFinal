@@ -11,7 +11,7 @@ import java.util.Date;
 
 public class Register extends Activity {
     //declareren
-    EditText ET_FIRST_NAME, ET_LAST_NAME, ET_USER_NAME, ET_USER_EMAIL, ET_USER_EMAIL_CHECK, ET_USER_PASS, ET_USER_PASS_CHECK;
+    EditText ET_FIRST_NAME, ET_LAST_NAME, ET_USER_NAME, ET_USER_EMAIL, ET_USER_EMAIL_CHECK, ET_USER_PASS, ET_USER_PASS_CHECK, ET_USER_BIRTH;
     String first_name, last_name, user_name, user_email, user_email_check, user_pass, user_pass_check, user_birth;
     NumberPicker noPicker1 = null, noPicker2 = null, noPicker3 = null;
 
@@ -19,6 +19,10 @@ public class Register extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_layout);
+
+        EditText editText = (EditText)findViewById(R.id.new_first_name);
+        editText.setSelection(0);
+
         ET_FIRST_NAME = (EditText)findViewById(R.id.new_first_name);
         ET_LAST_NAME = (EditText)findViewById(R.id.new_last_name);
         ET_USER_NAME = (EditText)findViewById(R.id.new_user_name);
@@ -26,23 +30,8 @@ public class Register extends Activity {
         ET_USER_EMAIL_CHECK = (EditText)findViewById(R.id.new_user_email_check);
         ET_USER_PASS = (EditText)findViewById(R.id.new_user_pass);
         ET_USER_PASS_CHECK = (EditText)findViewById(R.id.new_user_pass_check);
+        ET_USER_BIRTH = (EditText)findViewById(R.id.new_user_birth);
 
-        //Number Picker 1
-        noPicker1 = (NumberPicker)findViewById(R.id.numberPicker1);
-        noPicker1.setMaxValue(2017);
-        noPicker1.setMinValue(1900);
-        noPicker1.setWrapSelectorWheel(true);
-        noPicker1.setValue(2017);
-        //Number Picker 2
-        noPicker2 = (NumberPicker)findViewById(R.id.numberPicker2);
-        noPicker2.setMaxValue(12);
-        noPicker2.setMinValue(01);
-        noPicker2.setWrapSelectorWheel(true);
-        //Number Picker 3
-        noPicker3 = (NumberPicker)findViewById(R.id.numberPicker3);
-        noPicker3.setMaxValue(31);
-        noPicker3.setMinValue(1);
-        noPicker3.setWrapSelectorWheel(true);
     }
     public void userLog(View view)
     {
@@ -58,7 +47,7 @@ public class Register extends Activity {
         user_email_check = ET_USER_EMAIL_CHECK.getText().toString();
         user_pass = ET_USER_PASS.getText().toString();
         user_pass_check = ET_USER_PASS_CHECK.getText().toString();
-        user_birth = noPicker1.toString(); user_birth += noPicker2.toString(); user_birth += noPicker3.toString();
+        user_birth = ET_USER_BIRTH.getText().toString();
         String method = "register";
         BackgroundTask backgroundTask = new BackgroundTask(this);
         backgroundTask.execute(method, first_name, last_name, user_name, user_email, user_email_check, user_pass, user_pass_check, user_birth);

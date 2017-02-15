@@ -15,7 +15,10 @@
     <ScrollView
         android:id="@+id/regiser_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:orientation="vertical"
@@ -37,7 +40,7 @@
                     android:id="@+id/new_first_name"
                     android:hint="Voornaam"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -119,44 +122,23 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.04">
 
-                <TextView
-                    android:text="Geboortedatum:"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/new_user_birth"
-                    android:textSize="8pt"
-                    android:textColor="@color/zwart"
-                    android:gravity="center_vertical"
-                    android:layout_weight="0.5"
-                    android:layout_marginLeft="1pt"
-                    android:singleLine="true"/>
-
             </LinearLayout>
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <LinearLayout                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.04">
 
-                <NumberPicker
-                    android:layout_width="0dp"
+                <EditText
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/numberPicker1"
+                    android:inputType="textEmailAddress"
+                    android:hint="Geboortedatum"
+                    android:maxLines="1"
+                    android:ems="10"
+                    android:id="@+id/new_user_birth"
                     android:layout_weight="1"
-                    />
-
-                <NumberPicker
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/numberPicker2"
-                    android:layout_weight="1" />
-
-                <NumberPicker
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/numberPicker3"
-                    android:layout_weight="1" />
+                    android:singleLine="true"/>
 
             </LinearLayout>
 

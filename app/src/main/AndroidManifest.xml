@@ -9,7 +9,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/no_title">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,6 @@
         </activity>
         <activity android:name=".Register" />
         <activity android:name=".Home" />
-        <activity android:name=".NewActivity" />
         <activity android:name=".AddActivity"></activity>
     </application>
 
