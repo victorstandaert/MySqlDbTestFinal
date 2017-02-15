@@ -2,15 +2,16 @@ package com.example.victor.mysqldbtest;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 
+import java.util.Date;
+
 public class Register extends Activity {
     //declareren
-    EditText ET_FIRST_NAME, ET_LAST_NAME, ET_USER_NAME, ET_USER_EMAIL, ET_USER_EMAIL_CHECK, ET_USER_PASS, ET_USER_PASS_CHECK, ET_USER_BIRTH;
+    EditText ET_FIRST_NAME, ET_LAST_NAME, ET_USER_NAME, ET_USER_EMAIL, ET_USER_EMAIL_CHECK, ET_USER_PASS, ET_USER_PASS_CHECK;
     String first_name, last_name, user_name, user_email, user_email_check, user_pass, user_pass_check, user_birth;
     NumberPicker noPicker1 = null, noPicker2 = null, noPicker3 = null;
 

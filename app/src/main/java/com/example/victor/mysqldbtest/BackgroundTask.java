@@ -19,6 +19,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
+import static android.support.v4.app.ActivityCompat.startActivity;
+
 /**
  * Created by Victor on 9-11-2016.
  */
@@ -34,6 +36,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
     protected void onPreExecute() {
         alertDialog = new AlertDialog.Builder(ctx).create();
         alertDialog.setTitle("Login information...");
+
     }
 
     @Override
@@ -90,9 +93,11 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
                 httpURLConnection.setDoOutput(true);
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
+
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String data = URLEncoder.encode("login_name","UTF-8")+"="+URLEncoder.encode(login_name,"UTF-8")+"&"+
                     URLEncoder.encode("login_pass","UTF-8")+"="+URLEncoder.encode(login_pass,"UTF-8");
+
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -132,7 +137,14 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
         {
             Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
         }
-        else
+        else if(result.equals("Login success, welcome"))
+        {
+            Intent i = new Intent(ctx, Home.class);
+            ctx.startActivity(i);
+            alertDialog.setMessage(result);
+            alertDialog.show();
+        }
+        else if(result.equals("Login failed"))
         {
             alertDialog.setMessage(result);
             alertDialog.show();

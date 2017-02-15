@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends Activity {
     EditText ET_NAME, ET_PASS;
     String login_name, login_pass;
+    Button loginbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         ET_NAME = (EditText)findViewById(R.id.new_user_name);
         ET_PASS = (EditText)findViewById(R.id.new_user_pass);
+
+        loginbutton = (Button)findViewById(R.id.loginbut);
     }
     public void userReg(View view)
     {
