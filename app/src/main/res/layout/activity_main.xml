@@ -12,48 +12,77 @@
     tools:context="com.example.victor.mysqldbtest.MainActivity">
 
     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="35pt"
+        android:layout_weight="0.04"
+        >
+
+        <ImageView
+            android:layout_width="70pt"
+            android:layout_height="30pt"
+            app:srcCompat="@drawable/logo"
+            android:id="@+id/logo_register"
+            android:layout_weight="0.5" />
+
+        <TextView
+            android:text="FamConn"
+            android:layout_width="match_parent"
+            android:layout_height="30pt"
+            android:id="@+id/register_Title"
+            android:textSize="20pt"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimaryDark"
+            android:singleLine="true"
+            android:layout_weight="0.5"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/imageView4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_weight="0.04">
 
+        <!-- Tekstvak Gebruikersnaam / e-mail -->
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:id="@+id/new_user_name"
-            android:hint="Gebruikersnaam"
+            android:hint="@string/login_Name"
             android:maxLines="1"
             android:ems="10"
+            android:id="@+id/login_Name"
             android:singleLine="true" />
 
+        <!-- Tekstvak Gebruikersnaam / e-mail -->
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/new_user_pass"
-            android:hint="Paswoord"
+            android:inputType="textPersonName"
+            android:hint="@string/login_Password"
             android:maxLines="1"
+            android:ems="10"
+            android:id="@+id/login_Paswoord"
             android:singleLine="true" />
 
+        <!-- Button Login -->
         <Button
-            android:text="Inloggen"
+            android:text="@string/button_Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/loginbut"
-            android:onClick="userLogin"/>
+            android:id="@+id/button_Login" />
 
+        <!-- Text Register -->
         <TextView
-            android:text="Nog geen account? Registreer hier."
+            android:text="@string/link_Register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:id="@+id/button2"
-            android:onClick="userReg" />
+            android:id="@+id/link_Register" />
 
+        <!-- Button Register -->
     </LinearLayout>
 
 </RelativeLayout>

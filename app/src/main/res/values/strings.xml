@@ -3,4 +3,22 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Register Strings -->
+    <string name="register_first_name">Voornaam</string>
+    <string name="register_last_name">Famillienaam</string>
+    <string name="register_Email">Voer een e-mailadres in</string>
+    <string name="register_Email_Check">Voer het e-mailadres nog eens in</string>
+    <string name="register_Password">Paswoord</string>
+    <string name="register_Password_Check">Herhaal paswoord</string>
+    <string name="register_Nickname">Gebruikersnaam</string>
+    <string name="button_Register">Registreren</string>
+    <string name="register_Date_Text">Geboortedatum:</string>
+
+    <!-- Login Strings -->
+    <string name="login_Name">Gebruikersnaam</string>
+    <string name="login_Password">Paswoord</string>
+    <string name="button_Login">Inloggen</string>
+    <string name="link_Register">Nog geen account? Registreer hier.</string>
+    <string name="link_Login">Al een account? Klik hier.</string>
 </resources>
