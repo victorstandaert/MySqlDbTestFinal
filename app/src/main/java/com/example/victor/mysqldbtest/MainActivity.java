@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
         ET_NAME = (EditText)findViewById(R.id.new_user_name);
         ET_PASS = (EditText)findViewById(R.id.new_user_pass);
 
-        loginbutton = (Button)findViewById(R.id.loginbut);
+        loginbutton = (Button)findViewById(R.id.button_Login);
     }
     public void userReg(View view)
     {

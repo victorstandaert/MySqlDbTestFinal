@@ -21,5 +21,4 @@
         <activity android:name=".Home" />
         <activity android:name=".AddActivity"></activity>
     </application>
-//test
 </manifest>

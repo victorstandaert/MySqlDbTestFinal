@@ -133,7 +133,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:hint="Geboortedatum"
+                    android:hint="Geboortedatum: DD/MM/JJJJ"
                     android:maxLines="1"
                     android:ems="10"
                     android:id="@+id/new_user_birth"
