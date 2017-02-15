@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
     EditText ET_NAME, ET_PASS;
@@ -21,7 +22,17 @@ public class MainActivity extends Activity {
         ET_PASS = (EditText)findViewById(R.id.login_Paswoord);
 
         loginbutton = (Button)findViewById(R.id.button_Login);
+
+        final TextView link_Register = (TextView) findViewById(R.id.link_Register);
+        link_Register.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent registerPageIntent = new Intent(MainActivity.this, Register.class);
+                MainActivity.this.startActivity(registerPageIntent);
+            }
+        });
     }
+
     public void userReg(View view)
     {
         startActivity(new Intent(this, Register.class));
