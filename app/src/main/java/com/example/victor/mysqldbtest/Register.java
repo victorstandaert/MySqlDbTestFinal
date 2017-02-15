@@ -13,7 +13,6 @@ public class Register extends Activity {
     //declareren
     EditText ET_FIRST_NAME, ET_LAST_NAME, ET_USER_NAME, ET_USER_EMAIL, ET_USER_EMAIL_CHECK, ET_USER_PASS, ET_USER_PASS_CHECK, ET_USER_BIRTH;
     String first_name, last_name, user_name, user_email, user_email_check, user_pass, user_pass_check, user_birth;
-    NumberPicker noPicker1 = null, noPicker2 = null, noPicker3 = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

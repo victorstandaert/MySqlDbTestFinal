@@ -17,8 +17,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ET_NAME = (EditText)findViewById(R.id.new_user_name);
-        ET_PASS = (EditText)findViewById(R.id.new_user_pass);
+        ET_NAME = (EditText)findViewById(R.id.login_Name);
+        ET_PASS = (EditText)findViewById(R.id.login_Paswoord);
 
         loginbutton = (Button)findViewById(R.id.button_Login);
     }

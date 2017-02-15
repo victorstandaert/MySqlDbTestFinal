@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.04"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="65dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -77,7 +77,8 @@
             android:text="Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button_Login" />
+            android:id="@+id/button_Login"
+            android:onClick="userLogin"/>
 
         <!-- Text Register -->
         <TextView
@@ -85,7 +86,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:id="@+id/link_Register" />
+            android:id="@+id/link_Register"
+            android:onClick="userReg"/>
 
         <!-- Button Register -->
     </LinearLayout>
