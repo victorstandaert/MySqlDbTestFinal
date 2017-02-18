@@ -21,15 +21,6 @@ public class LoginActivity extends Activity {
         ET_PASS = (EditText)findViewById(R.id.login_Paswoord);
 
         loginbutton = (Button)findViewById(R.id.button_Login);
-
-        final TextView link_Register = (TextView) findViewById(R.id.link_Register);
-        link_Register.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent registerPageIntent = new Intent(LoginActivity.this, RegisterActivity.class);
-                LoginActivity.this.startActivity(registerPageIntent);
-            }
-        });
     }
 
     public void userReg(View view)

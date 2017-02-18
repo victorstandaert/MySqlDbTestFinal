@@ -162,7 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="20pt"
                 android:inputType="date"
-                android:id="@+id/user_birth"
+                android:id="@+id/new_user_birth"
                 android:maxLines="1"
                 android:textColor="@color/zwart"
                 android:gravity="center_vertical"
