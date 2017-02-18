@@ -16,7 +16,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         ET_NAME = (EditText)findViewById(R.id.login_Name);
         ET_PASS = (EditText)findViewById(R.id.login_Paswoord);
 
