@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/register_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -15,10 +16,7 @@
     <ScrollView
         android:id="@+id/regiser_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
@@ -26,33 +24,68 @@
             android:layout_height="wrap_content"
             android:weightSum="1">
 
+            <!-- Logo + Naam -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="35pt"
+                android:layout_weight="0.04">
+
+                <!-- Logo -->
+                <ImageView
+                    android:layout_width="70pt"
+                    android:layout_height="30pt"
+                    app:srcCompat="@drawable/logo"
+                    android:id="@+id/logo_register"
+                    android:layout_weight="0.5" />
+
+                <!-- Naam -->
+                <TextView
+                    android:text="FamConn"
+                    android:layout_width="match_parent"
+                    android:layout_height="30pt"
+                    android:id="@+id/register_Title"
+                    android:textSize="20pt"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:singleLine="true"
+                    android:layout_weight="0.5"/>
+
+            </LinearLayout>
+
+            <!-- Volledige naam -->
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.04">
 
+                <!-- Tekstvak voornaam -->
                 <EditText
-                    android:layout_width="166dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
+                    android:hint="@string/register_first_name"
+                    android:maxLines="1"
                     android:ems="10"
                     android:id="@+id/new_first_name"
-                    android:hint="Voornaam"
-                    android:maxLines="1"
+                    android:layout_weight="0.5"
                     android:singleLine="true" />
 
+                <!-- Tekstvak Famillienaam -->
                 <EditText
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:hint="Famillienaam"
+                    android:hint="@string/register_last_name"
                     android:maxLines="1"
                     android:ems="10"
                     android:id="@+id/new_last_name"
+                    android:layout_weight="0.5"
                     android:singleLine="true"  />
             </LinearLayout>
 
+            <!-- Tekstvak Nickname -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,96 +97,90 @@
                 android:layout_weight="1"
                 android:singleLine="true"/>
 
+            <!-- Tekstvak E-mail -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="Voer een e-mailadres in"
+                android:hint="@string/register_Email"
                 android:maxLines="1"
                 android:ems="10"
                 android:id="@+id/new_user_email"
                 android:layout_weight="1"
                 android:singleLine="true"/>
 
+            <!-- Tekstvak E-mail Check -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="Voer het e-mailadres nog een in"
+                android:hint="@string/register_Email_Check"
                 android:maxLines="1"
                 android:ems="10"
                 android:id="@+id/new_user_email_check"
                 android:layout_weight="1"
                 android:singleLine="true"/>
 
+            <!-- Passwoord + check -->
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.04">
 
-            <EditText
-                android:layout_width="168dp"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/new_user_pass"
-                android:hint="Paswoord"
-                android:fontFamily="Arial"
-                android:singleLine="true"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Herhaal paswoord"
-                android:maxLines="1"
-                android:ems="10"
-                android:id="@+id/new_user_pass_check"
-                android:fontFamily="Arial"
-                android:layout_weight="0.5"
-                android:singleLine="true"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.04">
-
-            </LinearLayout>
-
-            <LinearLayout                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.04">
-
+                <!-- Tekstvak Paswoord -->
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:hint="Geboortedatum: DD/MM/JJJJ"
+                    android:inputType="textPassword"
+                    android:hint="@string/register_Password"
                     android:maxLines="1"
                     android:ems="10"
-                    android:id="@+id/new_user_birth"
-                    android:layout_weight="1"
+                    android:id="@+id/new_user_pass"
+                    android:fontFamily="Arial"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"/>
+
+                <!-- Tekstvak Paswoord Check -->
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="@string/register_Password_Check"
+                    android:maxLines="1"
+                    android:ems="10"
+                    android:id="@+id/new_user_pass_check"
+                    android:fontFamily="Arial"
+                    android:layout_weight="0.5"
                     android:singleLine="true"/>
 
             </LinearLayout>
 
+            <!-- Tekst geboorttedatum -->
+            <EditText
+                android:hint="@string/register_Date_Text"
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:inputType="date"
+                android:id="@+id/user_birth"
+                android:maxLines="1"
+                android:textColor="@color/zwart"
+                android:gravity="center_vertical"
+                android:singleLine="true"/>
+
+            <!-- Register Button -->
             <Button
-                android:text="Registreren"
+                android:text="@string/button_Register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/button3"
+                android:id="@+id/button_Register"
                 android:onClick="userReg"
                 android:layout_margin="10dp"
+                android:layout_weight="0.04" />
 
-                />
-
+            <!-- Link login -->
             <TextView
-                android:text="Al een account? Klik hier."
+                android:text="@string/link_Login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -164,4 +191,4 @@
         </LinearLayout>
     </ScrollView>
 
-</RelativeLayout>
+</LinearLayout>

@@ -10,7 +10,7 @@
     <string name="register_Password_Check">Herhaal paswoord</string>
     <string name="register_Nickname">Gebruikersnaam</string>
     <string name="button_Register">Registreren</string>
-    <string name="register_Date_Text">Geboortedatum:</string>
+    <string name="register_Date_Text">Geboortedatum: DD/MM/JJJJ</string>
 
     <!-- Login Strings -->
     <string name="login_Name">Gebruikersnaam</string>
