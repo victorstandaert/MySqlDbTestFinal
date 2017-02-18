@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.system.Os;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -18,8 +17,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
-
-import static android.support.v4.app.ActivityCompat.startActivity;
 
 /**
  * Created by Victor on 9-11-2016.
@@ -139,7 +136,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
         }
         else if(result.equals("Login success, welcome"))
         {
-            Intent i = new Intent(ctx, Home.class);
+            Intent i = new Intent(ctx, UserAreaActivity.class);
             ctx.startActivity(i);
             alertDialog.setMessage(result);
             alertDialog.show();

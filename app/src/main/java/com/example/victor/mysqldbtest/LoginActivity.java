@@ -2,14 +2,13 @@ package com.example.victor.mysqldbtest;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class LoginActivity extends Activity {
     EditText ET_NAME, ET_PASS;
     String login_name, login_pass;
     Button loginbutton;
@@ -27,15 +26,15 @@ public class MainActivity extends Activity {
         link_Register.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent registerPageIntent = new Intent(MainActivity.this, Register.class);
-                MainActivity.this.startActivity(registerPageIntent);
+                Intent registerPageIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                LoginActivity.this.startActivity(registerPageIntent);
             }
         });
     }
 
     public void userReg(View view)
     {
-        startActivity(new Intent(this, Register.class));
+        startActivity(new Intent(this, RegisterActivity.class));
     }
 
     public void userLogin(View view)

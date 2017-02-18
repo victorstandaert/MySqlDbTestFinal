@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.victor.mysqldbtest.MainActivity">
+    tools:context="com.example.victor.mysqldbtest.LoginActivity">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -80,7 +80,7 @@
             android:id="@+id/button_Login"
             android:onClick="userLogin"/>
 
-        <!-- Text Register -->
+        <!-- Text RegisterActivity -->
         <TextView
             android:text="@string/link_Register"
             android:layout_width="match_parent"
@@ -89,7 +89,7 @@
             android:id="@+id/link_Register"
             android:onClick="userReg"/>
 
-        <!-- Button Register -->
+        <!-- Button RegisterActivity -->
     </LinearLayout>
 
 </RelativeLayout>

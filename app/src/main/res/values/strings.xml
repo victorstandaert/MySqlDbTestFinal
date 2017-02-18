@@ -4,7 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!-- Register Strings -->
+    <!-- RegisterActivity Strings -->
     <string name="register_first_name">Voornaam</string>
     <string name="register_last_name">Famillienaam</string>
     <string name="register_Email">Voer een e-mailadres in</string>

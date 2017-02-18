@@ -5,11 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.NumberPicker;
 
-import java.util.Date;
-
-public class Register extends Activity {
+public class RegisterActivity extends Activity {
     //declareren
     EditText ET_FIRST_NAME, ET_LAST_NAME, ET_USER_NAME, ET_USER_EMAIL, ET_USER_EMAIL_CHECK, ET_USER_PASS, ET_USER_PASS_CHECK, ET_USER_BIRTH;
     String first_name, last_name, user_name, user_email, user_email_check, user_pass, user_pass_check, user_birth;
@@ -34,7 +31,7 @@ public class Register extends Activity {
     }
     public void userLog(View view)
     {
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, LoginActivity.class));
     }
 
     public void userReg(View view)

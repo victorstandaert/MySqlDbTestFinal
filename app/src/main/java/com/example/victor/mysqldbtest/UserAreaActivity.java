@@ -18,7 +18,7 @@ import org.w3c.dom.Text;
 import layout.BlankFragment;
 
 @RequiresApi(api = Build.VERSION_CODES.N)
-public class Home extends AppCompatActivity {
+public class UserAreaActivity extends AppCompatActivity {
 
     Button AddActivity;
 
