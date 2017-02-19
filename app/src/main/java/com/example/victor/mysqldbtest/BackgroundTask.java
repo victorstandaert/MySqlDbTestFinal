@@ -40,6 +40,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
     protected String doInBackground(String... params) {
         String reg_url = "http://www.vhsj.be/websites/6ib/projectjv/webapp/register.php";
         String login_url = "http://www.vhsj.be/websites/6ib/projectjv/webapp/login.php";
+        String activity_url = "http://www.vhsj.be/websites/6ib/projectjv/webapp/new_activity.php";
         String method = params[0];
         if(method.equals("register"))
         {
@@ -119,6 +120,34 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
                 e.printStackTrace();
             }
         }
+        if(method.equals("activity"))
+        {
+            String name_activity  = params[1];
+            String description_activity = params [2];
+
+            try {
+                URL url = new URL(activity_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                OutputStream OS = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS,"UTF-8"));
+
+                String data = URLEncoder.encode("name_activity", "UTF-8")+ "=" + URLEncoder.encode(name_activity,"UTF-8") + "&" +
+                        URLEncoder.encode("description_activity", "UTF-8")+ "=" + URLEncoder.encode(description_activity,"UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                OS.close();
+                InputStream IS = httpURLConnection.getInputStream();
+                IS.close();
+                return "Activity added...";
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
         return null;
     }
@@ -131,6 +160,10 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
     @Override
     protected void onPostExecute(String result) {
         if(result.equals("Registration Success..."))
+        {
+            Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+        }
+        else if(result.equals("Activity added..."))
         {
             Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
         }
