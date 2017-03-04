@@ -40,19 +40,18 @@
                 android:text="Add activity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
                 android:id="@+id/btn_add"
                 android:onClick="NewActivity"
-                />
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
         </RelativeLayout>
         <ListView
             android:id="@+id/dailyView1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.19"
+            android:layout_weight="0.24"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_gravity="center_horizontal|center"
