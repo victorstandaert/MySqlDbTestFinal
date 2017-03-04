@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.victor.mysqldbtest.SplashScreen">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="123dp"
+        android:layout_height="114dp"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="226dp" />
 </android.support.constraint.ConstraintLayout>
