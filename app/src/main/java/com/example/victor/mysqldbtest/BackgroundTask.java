@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.view.View;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -124,6 +125,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
         {
             String name_activity  = params[1];
             String description_activity = params [2];
+            String datum_activity = params [3];
 
             try {
                 URL url = new URL(activity_url);
@@ -134,7 +136,8 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS,"UTF-8"));
 
                 String data = URLEncoder.encode("name_activity", "UTF-8")+ "=" + URLEncoder.encode(name_activity,"UTF-8") + "&" +
-                        URLEncoder.encode("description_activity", "UTF-8")+ "=" + URLEncoder.encode(description_activity,"UTF-8");
+                        URLEncoder.encode("description_activity", "UTF-8")+ "=" + URLEncoder.encode(description_activity,"UTF-8") + "&" +
+                        URLEncoder.encode("datum_activity", "UTF-8")+ "=" + URLEncoder.encode(datum_activity,"UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
