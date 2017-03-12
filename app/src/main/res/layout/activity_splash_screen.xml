@@ -6,11 +6,33 @@
     android:layout_height="match_parent"
     tools:context="com.example.victor.mysqldbtest.SplashScreen">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="123dp"
-        android:layout_height="114dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="226dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="368dp"
+        android:layout_height="78dp"
+        android:layout_weight="0.04"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="70pt"
+            android:layout_height="30pt"
+            app:srcCompat="@drawable/logo"
+            android:id="@+id/logo_register"
+            android:layout_weight="0.5" />
+
+        <!-- Naam -->
+        <TextView
+            android:text="FamConn"
+            android:layout_width="match_parent"
+            android:layout_height="30pt"
+            android:id="@+id/register_Title"
+            android:textSize="20pt"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimaryDark"
+            android:singleLine="true"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
